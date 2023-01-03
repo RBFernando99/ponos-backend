@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping(path = "/api/employees")
+@RequestMapping(path = "/api/employee")
 public class EmployeeController {
 
     private final EmployeeService employeeService;
@@ -35,7 +35,7 @@ public class EmployeeController {
         return employeeService.deleteEmployee(id);
     }
 
-    @GetMapping
+    @GetMapping("/all")
     public List<Employee> all() {
         return employeeService.all();
     }
